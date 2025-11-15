@@ -54,3 +54,7 @@ htmlcov/
 .env
 .env.local
 
+# Logs
+logs/
+*.log
+
