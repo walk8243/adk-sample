@@ -23,7 +23,7 @@ ollama run gemma3:270m
 
 ## ADKのインストール
 
-このプロジェクトでは、Google Agent Development Kit (ADK) を使用します。
+このプロジェクトでは、 [Google Agent Development Kit (ADK)](https://google.github.io/adk-docs/) を使用します。
 
 ### 前提条件
 
@@ -55,6 +55,14 @@ uv run adk web
 http://127.0.0.1:8000
 
 ### トラブルシューティング
+
+#### DEBUGログの出力
+
+以下のコマンドを使って起動することでLLMへのリクエストなど詳細なログが確認できます。
+
+```
+uv run adk web --log_level DEBUG
+```
 
 #### Windowsでのエラー
 
