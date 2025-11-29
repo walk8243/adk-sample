@@ -26,10 +26,11 @@ http://127.0.0.1:8000
 
 ### エージェント一覧
 
+- gemini_agent
+  - Gemini APIを利用するエージェント
+  - `.env` にGemini APIを利用するためのAPI KEYを登録する必要があります
 - ollama
   - ローカルLLMであるOllamaを利用するエージェント
-- sample_agent
-  - Gemini APIを利用するエージェント
 
 ## Ollamaのインストールと実行
 
@@ -91,12 +92,12 @@ OSError: [WinError 1314] クライアントは要求された特権を保有し�
 
 ### エージェントの使用
 
-`sample_agent/agent.py`には、Gemini 2.5 Flashモデルを使用するサンプルエージェントが定義されています。
+`gemini_agent/agent.py`には、Gemini 2.5 Flashモデルを使用するサンプルエージェントが定義されています。
 
 エージェントを使用するには、Pythonコード内で以下のようにインポートします。
 
 ```python
-from sample_agent.agent import root_agent
+from gemini_agent.agent import root_agent
 ```
 
-詳しい使用方法については、`sample_agent/agent.py`を参照してください。
+詳しい使用方法については、`gemini_agent/agent.py`を参照してください。
