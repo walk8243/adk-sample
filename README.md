@@ -1,6 +1,35 @@
 # adk-sample
 
-Agent Development Kitを使ってみる
+Agent Development Kitを使ってみるサンプルアプリケーション
+
+## 使い方
+
+### 前提条件
+
+このリポジトリでは以下が必要になります。
+
+- Python 3.13以上
+- uv（Pythonパッケージマネージャー）
+- Ollama
+
+### 実行方法
+
+プロジェクトのルートディレクトリで以下のコマンドを実行します。
+
+```bash
+uv run adk web
+```
+
+その後、以下をブラウザで表示し、エージェントを選択してチャットしてください。
+
+http://127.0.0.1:8000
+
+### エージェント一覧
+
+- ollama
+  - ローカルLLMであるOllamaを利用するエージェント
+- sample_agent
+  - Gemini APIを利用するエージェント
 
 ## Ollamaのインストールと実行
 
@@ -25,11 +54,6 @@ ollama run gemma3:270m
 
 このプロジェクトでは、 [Google Agent Development Kit (ADK)](https://google.github.io/adk-docs/) を使用します。
 
-### 前提条件
-
-- Python 3.13以上
-- uv（Pythonパッケージマネージャー）
-
 ### インストール手順
 
 プロジェクトのルートディレクトリで以下のコマンドを実行します。
@@ -40,27 +64,13 @@ uv sync
 
 これにより、`pyproject.toml`に記載されている依存関係（`google-adk>=1.18.0`など）がインストールされます。
 
-## ADKの実行方法
-
-### 基本的な実行
-
-プロジェクトのルートディレクトリで以下のコマンドを実行します。
-
-```bash
-uv run adk web
-```
-
-その後、以下をブラウザで表示し、モデルを選択してチャットしてください。
-
-http://127.0.0.1:8000
-
 ### トラブルシューティング
 
 #### DEBUGログの出力
 
 以下のコマンドを使って起動することでLLMへのリクエストなど詳細なログが確認できます。
 
-```
+```bash
 uv run adk web --log_level DEBUG
 ```
 
@@ -68,7 +78,7 @@ uv run adk web --log_level DEBUG
 
 Windowsで実行すると以下のエラーが発生する可能性があります。
 
-```
+```text
 OSError: [WinError 1314] クライアントは要求された特権を保有していません
 ```
 
