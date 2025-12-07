@@ -11,6 +11,10 @@ Agent Development Kitを使ってみるサンプルアプリケーション
 - Python 3.13以上
 - uv（Pythonパッケージマネージャー）
 - Ollama
+  - `gemma3:270m` モデルのダウンロード済み
+- Google APIキー
+  - Google AI Studioから払いだす
+  - 無料枠のみを利用
 
 ### 実行方法
 
@@ -28,9 +32,12 @@ http://127.0.0.1:8000
 
 - gemini_agent
   - Gemini APIを利用するエージェント
-  - `.env` にGemini APIを利用するためのAPI KEYを登録する必要があります
+  - 環境変数にGemini APIを利用するためのAPI KEYを登録する必要があります
 - ollama
   - ローカルLLMであるOllamaを利用するエージェント
+- mcp_user
+  - MCPサーバを利用するエージェント
+  - 環境変数にGemini APIを利用するためのAPI KEYを登録する必要があります
 
 ## Ollamaのインストールと実行
 

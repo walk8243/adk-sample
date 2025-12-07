@@ -7,3 +7,8 @@ dependencies = [
     "google-adk>=1.18.0",
     "litellm>=1.80.0",
 ]
+
+[tool.uv.workspace]
+members = [
+    "mcp_user/calculator",
+]
